@@ -11,6 +11,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin: 23px;
   line-height: 1;
 }
 
@@ -79,3 +80,14 @@ textarea {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.to-do {
+  background-color: var(--blue);
+}
+
+.time-of-day {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
