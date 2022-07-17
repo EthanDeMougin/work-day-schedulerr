@@ -83,6 +83,7 @@ textarea {
 
 .to-do {
   background-color: var(--blue);
+  display: flex;
 }
 
 .time-of-day {
@@ -99,7 +100,15 @@ textarea {
 .save-button {
   background-color: var(--white);
   display: flex;
+  margin-left: 1px;
   justify-content: center;
   align-items: center;
 }
 
+.form-control {
+  visibility: hidden;
+}
+
+#nope {
+  background-color: var(--red);
+}

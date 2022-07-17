@@ -17,6 +17,9 @@ $("#currentDay").text(currentDate);
 
 var timeSlots = $(".to-do").toArray();
 
+$("#input-form").css('visibility', 'visible');
+
+
 $(".to-do").on("click", function () {
     console.log("CLICKED");
     if ($(this).children().text() == "") {
@@ -29,6 +32,16 @@ $(".to-do").on("click", function () {
 console.log($("#8-text").text());
 $("#8-text").text("goodbye");
 
+$(".save-button").on("click", function () {
+    console.log($(this).parent().children(".to-do").children(".form-control").css("visibility"));
 
+    var currentToDo = $(this).parent().children(".to-do").children(".form-control");
+    console.log(currentToDo.hidden);
+    if (currentToDo.hidden == "false") {
+        console.log("visible");
+    } else {
+        console.log("hidden");
+    }
+});
 
 setTimeSlotColors(); 
