@@ -17,4 +17,18 @@ $("#currentDay").text(currentDate);
 
 var timeSlots = $(".to-do").toArray();
 
+$(".to-do").on("click", function () {
+    console.log("CLICKED");
+    if ($(this).children().text() == "") {
+        $(this).children().text("hello");
+    } else {
+        $(this).children().text("");
+    }
+});
+
+console.log($("#8-text").text());
+$("#8-text").text("goodbye");
+
+
+
 setTimeSlotColors(); 

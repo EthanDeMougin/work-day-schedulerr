@@ -91,3 +91,15 @@ textarea {
   justify-content: flex-end;
 }
 
+#currentDay {
+  font-style: italic;
+  font-size: 26px;
+}
+
+.save-button {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
