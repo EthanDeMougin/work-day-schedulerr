@@ -17,31 +17,21 @@ $("#currentDay").text(currentDate);
 
 var timeSlots = $(".to-do").toArray();
 
-$("#input-form").css('visibility', 'visible');
-
-
 $(".to-do").on("click", function () {
-    console.log("CLICKED");
-    if ($(this).children().text() == "") {
-        $(this).children().text("hello");
-    } else {
-        $(this).children().text("");
-    }
+    $(".form-control").each(function (index, element) {
+        element.style.visibility = "hidden";
+    })
+    var formZoneID = "#input-form-" + ($(this)[0].id);
+    $(formZoneID)[0].style.visibility = "visible";
 });
 
-console.log($("#8-text").text());
-$("#8-text").text("goodbye");
-
 $(".save-button").on("click", function () {
-    console.log($(this).parent().children(".to-do").children(".form-control").css("visibility"));
+    var currentTaskForm = $(this).parent().children(".to-do").children(".form-control")[0];
+    var taskDescription = currentTaskForm.value;
+    var currentP = $(this).parent().children(".to-do").children(".display-text")[0];
 
-    var currentToDo = $(this).parent().children(".to-do").children(".form-control");
-    console.log(currentToDo.hidden);
-    if (currentToDo.hidden == "false") {
-        console.log("visible");
-    } else {
-        console.log("hidden");
-    }
+    currentP.textContent = taskDescription;
+    currentTaskForm.style.visibility = "hidden";
 });
 
 setTimeSlotColors(); 
