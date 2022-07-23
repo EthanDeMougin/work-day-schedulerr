@@ -11,11 +11,19 @@ function setTimeSlotColors() {
     }
 }
 
-
 var currentDate = moment().format('dddd, MMM Do');
 $("#currentDay").text(currentDate);
-
 var timeSlots = $(".to-do").toArray();
+
+var tasks = JSON.parse(localStorage.getItem("tasks"));
+function getStoredTasks() {
+    if (localStorage.getItem("tasks") === null) {
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem("tasks"));
+        console.log(tasks);
+    }
+}
 
 $(".to-do").on("click", function () {
     $(".form-control").each(function (index, element) {
@@ -32,6 +40,15 @@ $(".save-button").on("click", function () {
 
     currentP.textContent = taskDescription;
     currentTaskForm.style.visibility = "hidden";
+
+    var currentTask = {
+        "p-id": 4,
+        "task": taskDescription
+    }
+    tasks.push(currentTask);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
 });
 
+getStoredTasks();
 setTimeSlotColors(); 
