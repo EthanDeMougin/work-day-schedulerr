@@ -109,6 +109,18 @@ textarea {
   visibility: hidden;
 }
 
-#nope {
+.display-text {
+  margin-top: 10px;
+}
+
+.delete-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn, .btn:hover {
   background-color: var(--red);
+  margin-top: 50px;
+  width: 30%;
+  opacity: 1;
 }

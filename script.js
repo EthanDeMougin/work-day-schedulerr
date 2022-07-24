@@ -60,7 +60,7 @@ $(".save-button").on("click", function () {
     currentTaskForm.style.visibility = "hidden";
 
     var currentTask = {
-        "p-id": 4,
+        "pID": currentP.id,
         "task": taskDescription
     }
     tasks.push(currentTask);
