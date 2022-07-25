@@ -74,4 +74,4 @@ $("#remove-tasks").on("click", function () {
 });
 
 getStoredTasks();
-setTimeSlotColors(); 
+setTimeSlotColors();
