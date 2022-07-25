@@ -3,7 +3,7 @@ var future_task_color = 'rgb(119,221,119,0.8)';
 function setTimeSlotColors() {
     var currentTime = moment().format('kk');
     for (var i = 0; i < timeSlots.length; i++) {
-        if (parseInt(timeSlots[i].id) == (currentTime - 4)) {
+        if (parseInt(timeSlots[i].id) == (currentTime)) {
             timeSlots[i].style.backgroundColor = current_task_color;
         } else if (parseInt(timeSlots[i].id) > currentTime) {
             timeSlots[i].style.backgroundColor = future_task_color;

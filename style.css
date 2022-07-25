@@ -69,6 +69,9 @@ textarea {
 }
 
 .saveBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-left: 1px solid var(--black);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -82,7 +85,7 @@ textarea {
 }
 
 .to-do {
-  background-color: var(--blue);
+  background-color: var(--off-white);
   display: flex;
 }
 
